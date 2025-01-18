@@ -93,3 +93,7 @@ If you want to expose your application to the outside world, you can use Ngrok:
   - You'll get a new URL at the start of each session
   - Free account session duration is 2 hours
   - Don't forget to update the `.env` file when the URL changes
+
+## Demo
+
+Client URL: [https://text2image-ui.vercel.app/](https://text2image-ui.vercel.app/)
