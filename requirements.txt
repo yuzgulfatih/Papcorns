@@ -1,0 +1,6 @@
+Flask
+flask-cors
+diffusers
+torch
+pyngrok
+transformers

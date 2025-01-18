@@ -41,6 +41,7 @@ text2image-project/
 
 3. **Backend Setup**
    ```bash
+   pip install -r requirements.txt
    jupyter notebook
    ```
    When Jupyter Notebook opens:
