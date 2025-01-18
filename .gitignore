@@ -5,7 +5,6 @@ __pycache__/
 */.ipynb_checkpoints/*
 
 # React (text2image-ui)
-text2image-ui/node_modules/
 text2image-ui/build/
 text2image-ui/.env
 
@@ -16,3 +15,8 @@ text2image-ui/.env
 # OS
 .DS_Store
 Thumbs.db 
+
+# Node modules (everywhere)
+node_modules/
+**/node_modules/
+text2image-ui/node_modules/
