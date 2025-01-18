@@ -1,94 +1,94 @@
-# Text2Image Projesi
+# Text2Image Project
 
-Bu proje, metin girişlerini yapay zeka kullanarak görüntülere dönüştüren bir web uygulamasıdır. Proje, modern bir web arayüzü (React) ve güçlü bir backend API'den oluşmaktadır.
+This project is a web application that transforms text inputs into images using artificial intelligence. The project consists of a modern web interface (React) and a powerful backend API.
 
-## 🚀 Başlangıç
+## 🚀 Getting Started
 
-Bu bölüm, projeyi yerel geliştirme ortamınızda nasıl çalıştıracağınızı adım adım açıklar.
+This section explains step by step how to run the project in your local development environment.
 
-### Ön Gereksinimler
+### Prerequisites
 
-Projeyi çalıştırmak için aşağıdaki yazılımların bilgisayarınızda kurulu olması gerekmektedir:
+The following software must be installed on your computer to run the project:
 
-- Node.js (v16 veya üzeri)
-- Python (3.8 veya üzeri)
+- Node.js (v16 or higher)
+- Python (3.8 or higher)
 - Jupyter Notebook
-- npm veya yarn
+- npm or yarn
 - Git
-- Ngrok (Opsiyonel - Dış erişim için)
+- Ngrok (Optional - For external access)
 
-### Proje Yapısı
+### Project Structure
 
 ```
-text2image-projesi/
-├── text2image-ui/     # React frontend uygulaması
+text2image-project/
+├── text2image-ui/     # React frontend application
 └── model_api.ipynb    # Jupyter notebook backend API
 ```
 
-### Kurulum Adımları
+### Installation Steps
 
-1. **Projeyi Klonlama**
+1. **Clone the Project**
    ```bash
-   git clone [proje-url]
-   cd [proje-klasörü]
+   git clone [project-url]
+   cd [project-folder]
    ```
 
-2. **Frontend Kurulumu**
+2. **Frontend Setup**
    ```bash
    cd text2image-ui
    npm install
    ```
 
-3. **Backend Kurulumu**
+3. **Backend Setup**
    ```bash
    jupyter notebook
    ```
-   Jupyter Notebook açıldığında:
-   - `model_api.ipynb` dosyasını açın
-   - Tüm hücreleri sırasıyla çalıştırın (Run All)
+   When Jupyter Notebook opens:
+   - Open the `model_api.ipynb` file
+   - Run all cells in sequence (Run All)
 
-### Uygulamayı Çalıştırma
+### Running the Application
 
-1. **Backend API'yi Başlatma**
-   - Jupyter Notebook'ta `model_api.ipynb` dosyasını açın
-   - Tüm hücreleri çalıştırın
-   - API varsayılan olarak `http://localhost:5000` adresinde çalışacaktır
+1. **Starting the Backend API**
+   - Open `model_api.ipynb` in Jupyter Notebook
+   - Run all cells
+   - The API will run at `http://localhost:5000` by default
 
-2. **Frontend'i Başlatma**
+2. **Starting the Frontend**
    ```bash
    cd text2image-ui
    npm start
    ```
-   Frontend uygulama varsayılan olarak `http://localhost:3000` adresinde çalışacaktır.
+   The frontend application will run at `http://localhost:3000` by default.
 
-### Ngrok ile Dış Erişim Yapılandırması (Opsiyonel)
+### Ngrok External Access Configuration (Optional)
 
-Eğer uygulamanızı dış dünyaya açmak istiyorsanız, Ngrok kullanabilirsiniz:
+If you want to expose your application to the outside world, you can use Ngrok:
 
-1. **Ngrok Kurulumu**
-   - [Ngrok'u indirin ve kurun](https://ngrok.com/download)
-   - Ngrok hesabı oluşturun ve auth token'ınızı ayarlayın
+1. **Ngrok Setup**
+   - [Download and install Ngrok](https://ngrok.com/download)
+   - Create a Ngrok account and set up your auth token
 
-2. **Backend API'yi Ngrok ile Dışa Açma**
+2. **Expose Backend API with Ngrok**
    ```bash
    ngrok http 5000
    ```
-   Bu komut size benzersiz bir URL verecektir (örn: `https://abc123.ngrok.io`)
+   This command will give you a unique URL (e.g., `https://abc123.ngrok.io`)
 
-3. **Frontend'de Ngrok URL'ini Ayarlama**
-   - `text2image-ui/.env` dosyasını açın
-   - API URL'ini Ngrok'tan aldığınız URL ile güncelleyin:
+3. **Configure Ngrok URL in Frontend**
+   - Open `text2image-ui/.env` file
+   - Update the API URL with the Ngrok URL:
    ```env
    REACT_APP_API_URL=https://abc123.ngrok.io
    ```
-   - Frontend uygulamasını yeniden başlatın
+   - Restart the frontend application
 
-⚠️ **Önemli Notlar:**
-- Backend API'nin çalışır durumda olduğundan emin olun
-- Frontend uygulamasını başlatmadan önce `.env` dosyasındaki API URL'inin doğru olduğundan emin olun
-- Yerel geliştirme için `http://localhost:5000` adresini kullanabilirsiniz
-- Jupyter Notebook'ta hücreleri sırasıyla çalıştırmaya dikkat edin
-- Ngrok kullanırken:
-  - Her oturum başlangıcında yeni bir URL alırsınız
-  - Ücretsiz hesapta oturum süresi 2 saattir
-  - URL değiştiğinde `.env` dosyasını güncellemeyi unutmayın
+⚠️ **Important Notes:**
+- Make sure the Backend API is running
+- Ensure the API URL in the `.env` file is correct before starting the frontend application
+- Use `http://localhost:5000` for local development
+- Pay attention to running cells in sequence in Jupyter Notebook
+- When using Ngrok:
+  - You'll get a new URL at the start of each session
+  - Free account session duration is 2 hours
+  - Don't forget to update the `.env` file when the URL changes
