@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# React (text2image-ui)
+text2image-ui/node_modules/
+text2image-ui/build/
+text2image-ui/.env
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db 
